@@ -1,0 +1,22 @@
+{
+  "name": "@deno-ext/assert",
+  "version": "0.1.3",
+  "description": "deno assert",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "biome check --apply-unsafe  ./",
+    "format": "biome format --write  ./",
+    "build": "rm ./dist -rf && tsc -p ./tsconfig.build.json",
+    "test": "esbuild ./test/base.test.ts --bundle --outfile=./dist/index.js --platform=node && qjs ./dist/index.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@deno-ext/node": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  }
+}

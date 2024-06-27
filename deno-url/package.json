@@ -1,0 +1,36 @@
+{
+  "name": "@deno-ext/url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "biome check --apply-unsafe  ./",
+    "format": "biome format --write  ./",
+    "build": "rm ./dist -rf && tsc -p ./tsconfig.build.json",
+    "test": "esbuild ./test/base.test.ts --bundle --outfile=./dist/index.js && qjs ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+    "exports": {
+      ".": "./dist/index.js",
+      "./*": "./dist/*.js"
+    },
+    "typesVersions": {
+      "*": {
+        ".": [
+          "./dist/index.d.ts"
+        ],
+        "./*": [
+          "./dist/*.d.ts"
+        ]
+      }
+    },
+  "dependencies": {
+    "@deno-ext/core": "workspace:*",
+    "@deno-ext/webidl": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  }
+}

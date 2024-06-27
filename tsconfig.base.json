@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "ES2022", "es2021","DOM"],
+    "allowJs": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "noEmitOnError": false,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "paths": {
+      "@deno-ext/console": ["./deno-console/src"],
+      "@deno-ext/webidl": ["./deno-webidl/src"],
+      "@deno-ext/core": ["./deno-core/src"],
+      "@deno-ext/util": ["./deno-util/src"],
+      "@deno-ext/node": ["./deno-node/src"],
+      "@deno-ext/url": ["./deno-url/src"],
+      "@deno-ext/io": ["./deno-io/src"],
+      "@deno-ext/assert": ["./deno-assert/src"],
+      "@deno-ext/internal": ["./deno-internal/src"]
+    }
+  }
+}

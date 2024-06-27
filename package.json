@@ -1,0 +1,29 @@
+{
+  "name": "deno-ext",
+  "version": "0.0.0",
+  "private": true,
+  "description": "deno ext",
+  "scripts": {
+    "case-police": "case-police \"**/*.ts\"  fix",
+    "dev": "pnpm run --parallel dev",
+    "es5": "pnpm run --parallel es5",
+    "build": "pnpm run -r build",
+    "example": "pnpm run --parallel dev",
+    "lint": "biome check --apply-unsafe  ./",
+    "format": "biome format --write  ./",
+    "lint:fix": "biome lint ./ --write --unsafe",
+    "test": "pnpm run --parallel test",
+    "clear": "rm -rf node_modules && pnpm -r exec rm -rf node_modules dist es5",
+    "clear-dist": "rm -rf dist es5 && pnpm -r exec rm -rf dist es5",
+    "release": "pnpm publish -r --access public",
+    "release-alpha": "pnpm publish -r --access public --tag alpha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.2",
+    "esbuild": "^0.19.12",
+    "typescript": "^5.5.2"
+  }
+}

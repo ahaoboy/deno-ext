@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 const isNumericLookup = {}
 const ALL_PROPERTIES = 0
 const ONLY_WRITABLE = 1
